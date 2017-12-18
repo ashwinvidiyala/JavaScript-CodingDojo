@@ -6,7 +6,35 @@
 
     <script type="text/javascript">
 
-      
+      var reward = 0.01
+
+      for (var i = 0; i <= 30; i++) {
+        reward *= 2;
+      }
+
+      console.log ("After 30 days, the reward was $" + reward)
+
+      var reward2 = 0.01
+      var counter = 1
+
+      while (reward2 <= 10000) {
+        reward2 *= 2;
+        counter++;
+      }
+
+      console.log ("It would take the servant " + counter + "days to make $" +
+      reward2)
+
+      reward3 = 0.01
+      var counter2 = 0
+
+      while (reward3 <= 100000000) {
+        reward3 *= 2;
+        counter2++;
+      }
+
+      console.log ("It would take the servant " + counter2 + "days to make $" +
+      reward3)
 
     </script>
   </head>

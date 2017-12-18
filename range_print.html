@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <script type="text/javascript">
+
+      function printRange(start, end, skip = 1) {
+        if (end) {
+          for (start; start < end; start += skip) {
+            console.log(start);
+          }
+        } else if (!end) {
+          end = start;
+          start = 0;
+          printRange(start, end);
+        }
+      }
+
+      printRange(10, 20, 2)
+      printRange(10)
+
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>
