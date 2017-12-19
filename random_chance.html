@@ -6,18 +6,26 @@
 
     <script type="text/javascript">
 
-        function slotMachine(quarters) {
+    function slotMachine(quarters) {
 
-          while (quarters > 0) {
-            quarters--;
-            var wins = Math.floor(Math.random()*100);
-            if (wins == 1) {
-              return quarters+= Math.floor(Math.random()*50 + 51);
-            } else {
-              slotMachine(quarters);
-            }
-          }
+      win = Math.floor(Math.random() * 100);
+      var winnings;
+
+      while (quarters > 0) {
+        if (win == 1) {
+          winnings = Math.floor(Math.random() * 50 + 51);
+          quarters--;
+          return quarters + winnings;
+        } else if (quarters == 1) {
+            return 0;
+        } else {
+          quarters--;
         }
+      }
+
+    }
+
+
     </script>
   </head>
   <body>
