@@ -5,7 +5,19 @@
     <title></title>
 
     <script type="text/javascript">
-        
+
+        function slotMachine(quarters) {
+
+          while (quarters > 0) {
+            quarters--;
+            var wins = Math.floor(Math.random()*100);
+            if (wins == 1) {
+              return quarters+= Math.floor(Math.random()*50 + 51);
+            } else {
+              slotMachine(quarters);
+            }
+          }
+        }
     </script>
   </head>
   <body>
