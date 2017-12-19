@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  </head>
+  <body>
+    <script type="text/javascript">
+    var students = [
+       {first_name : 'Michael', last_name : 'Jordan'},
+       {first_name : 'John',    last_name : 'Rosales'},
+       {first_name : 'Mark',    last_name : 'Guillen'},
+       {first_name : 'KB',      last_name : 'Tonel'}
+      ]
+
+    for (var student in students) {
+      console.log(students[student].first_name + " " +
+      students[student].last_name);
+    }
+
+    var users = {
+       'Students': [
+           {first_name:  'Michael', last_name : 'Jordan'},
+           {first_name : 'John', last_name : 'Rosales'},
+           {first_name : 'Mark', last_name : 'Guillen'},
+           {first_name : 'KB', last_name : 'Tonel'}
+                  ],
+       'Instructors': [
+           {first_name : 'Michael', last_name : 'Choi'},
+           {first_name : 'Martin', last_name : 'Puryear'}
+                      ]
+      }
+
+      function functionPrint(currentValue, index) {
+        console.log(currentValue);
+      }
+    for (var user in users) {
+      console.log(users[user]);
+      users[user].forEach(function(value, index){
+      console.log(index + " - " + value.first_name + " " + value.last_name
+      + " - "+ (value.first_name.length + value.last_name.length));
+      });
+      //console.log("1 - MICHAEL JORDAN - 13");
+      // console.log(users[user] "-" + users[user][0].first_name)
+    }
+
+    </script>
+  </body>
+</html>
